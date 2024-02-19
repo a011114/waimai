@@ -1,0 +1,29 @@
+.view-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+   
+  }
+  
+  .paytext {
+    font-size: 25px; /* 调整字体大小 */
+    font-weight: 700;
+    margin-bottom: 12px; /* 调整下方间距 */
+  }
+  
+  .paybten {
+    width: 100%; /* 加宽按钮 */
+    height: 40px; /* 加高按钮 */
+    border: none;
+    border-radius: 20px; /* 调整圆角 */
+    background-color: #007aff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; /* 调整字体大小 */
+    margin-top: 30px; /* 调整上方间距 */
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view class="index_container">
+  <view class='head' >
+    <view class='address' bindtap="changeaddress">
+      <text class='icon iconfont icon-dingwei'></text>
+      <text>{{adderssText}}</text>
+      <text class='icon iconfont icon-row-right-copy'></text>
+    </view>
+  </view>
+  <view class='nav'>
+    <swiper class='swiper' indicator-dots indicator-color="#eee" indicator-active-color="#ffd161">
+      <swiper-item class="nav-slide">
+        <view wx:for="{{array}}" wx:key="item.title" class='item'>
+          <image src='{{item.imgUrl}}'></image>
+          <view>{{item.title}}</view>
+        </view>
+      </swiper-item>
+      <swiper-item class="nav-slide">
+        <view wx:for="{{array1}}" wx:key="item.title" class='item'>
+          <image src='{{item.imgUrl}}'></image>
+          <view>{{item.title}}</view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class='near-store'>
+    <text class="near-store-text">附近商家</text>
+  </view>
+  <view class='tabs' id='tabs' bindtap='getTabsInfo'>
+    <view class="tab {{sortIndex==0?'active':''}}" data-index="0">
+      <text data-index="0">{{sortItem[sortListIndex]}}</text>
+      <text class='icon iconfont icon-row-bottom-copy' data-index="0"></text>
+    </view>
+    <view class="tab {{sortIndex==1?'active':''}}" data-index="1">销量最高</view>
+    <view class="tab {{sortIndex==2?'active':''}}" data-index="2">速度最快</view>
+    <view class="tab {{sortIndex==3?'active':''}}" data-index="3">
+      <text data-index="3">筛选</text>
+      <text class='icon iconfont icon-shaixuan' data-index="3"></text>
+    </view>
+  </view>
+  <view class='tabs tabs-fixed' wx:if="{{showFixed}}" bindtap='getFixedTabsInfo'>
+    <view class="tab {{sortIndex==0?'active':''}}" data-index="0">
+      <text data-index="0">{{sortItem[sortListIndex]}}</text>
+      <text class="icon iconfont {{showSort?'icon-row-up-copy':'icon-row-bottom-copy'}}" data-index="0"></text>
+    </view>
+    <view class="tab {{sortIndex==1?'active':''}}" data-index="1">销量最高</view>
+    <view class="tab {{sortIndex==2?'active':''}}" data-index="2">速度最快</view>
+    <view class="tab {{sortIndex==3?'active':''}}" data-index="3">
+      <text data-index="3">筛选</text>
+      <text class='icon iconfont icon-shaixuan' data-index="3"></text>
+    </view>
+    <view class='sort' catchtouchmove="move" style='height:{{sortHeight}}px' bindtap='selectSort' wx:if="{{showSort}}">
+      <view class="sort-item {{sortListIndex==index?'active':''}}" wx:for="{{sortItem}}" data-sortIndex="{{index}}" wx:key="item">{{item}}</view>
+    </view>
+  </view>
+  <view class='store-list'>
+    <store-list wx:for='{{storeList}}' wx:key="item.storeId" store-info="{{item}}" bind:select="select" class='store-item'></store-list>
+  </view>
+  <view class='footer'>暂无更多~~</view>
+</view>

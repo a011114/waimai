@@ -1,0 +1,8 @@
+/* pages/user/user.wxss */
+
+.head {
+  background-color: #ffd161;
+}
+.head .head_img{
+  border-radius: 50%;
+}

@@ -1,0 +1,52 @@
+{
+ 
+  "pages":[
+    "pages/index/index",
+    "pages/shop/shop",
+    "pages/user/user",
+    "pages/order/order",
+    "pages/pay/pay",
+    "pages/huiyuan/HuiYuan"
+  ],
+  "window":{
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "美团外卖",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#ffd161",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./icons/index.png",
+        "selectedIconPath": "./icons/index_select.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "./icons/cart.png",
+        "selectedIconPath": "./icons/cart_select.png"
+      },
+      {
+        "pagePath": "pages/huiyuan/HuiYuan",
+        "text": "会员",
+        "iconPath": "./icons/huiyuan2.png",
+        "selectedIconPath": "./icons/huiyuan1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "./icons/user.png",
+        "selectedIconPath": "./icons/user_select.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  }
+}

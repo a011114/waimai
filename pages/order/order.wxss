@@ -1,0 +1,120 @@
+
+.order-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .order-header {
+    height: 44px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+  }
+  
+  .order-content {
+    flex: 1;
+    position: relative;
+  }
+  
+  .order-scroll {
+    height: 100%;
+    background-color: #f8f8f8;
+    padding: 10px;
+  }
+  
+  .order-item {
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .order-item-header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .order-item-status {
+    font-size: 12px;
+    color: orange;
+  }
+  
+  .order-item-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+    padding: 0 10px;
+  }
+  
+  .order-item-detail-name {
+    font-size: small;
+    text-align: left;
+    margin-bottom: 2px;
+  }
+  
+  .order-item-total {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    color: #f00;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .paybten {
+    width: 120px; /* 加宽按钮 */
+    height: 40px; /* 加高按钮 */
+    border: none;
+    border-radius: 20px; /* 调整圆角 */
+    background-color: #007aff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; /* 调整字体大小 */
+    margin-top: 10px; /* 调整上方间距 */
+  }
+  /* 在 wxss 文件中设置图片的样式 */
+/* 在样式表中设置图片的样式 */
+.dish-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .noimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .noOrderImg{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  

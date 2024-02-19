@@ -1,0 +1,76 @@
+<!--pages/HuiYuan/HuiYuan.wxml-->
+<view>
+  <view class="image_center">
+    <image src="https://img1.baidu.com/it/u=1748357198,1866063789&fm=253&fmt=auto&app=138&f=PNG?w=500&h=291" style="width:300px; height:150px;" />
+  </view>
+
+  <view class="line"></view>
+
+  <view class="items">
+  <block wx:for="{{hotList}}" >
+    <view class="item" data-id="{{item.id}}" bindtap="onItemTap">
+      <view class="name_top">{{item.goodsName}}</view>
+      <view class="price">￥ {{item.goodsPrice}}</view>
+      <view class="name_but">{{item.text}}</view>
+    </view>
+  </block>
+</view>
+  <view class="line"></view>
+    <view class="itm">
+      <image src="/images/yue.png" style="width: 25px;height: 25px;padding-top: 15px;" />
+      <view class="order" >账户余额</view>
+      <view class="detail2"><text>0.00元 ></text></view>
+    </view>
+    <view class="line1"></view>
+    <view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="font"><text style="float: left;">支付方式:</text>{{array[index]}}</view>
+      </picker>
+    </view>
+    <view class="line1"></view>
+    <view>
+      <view class="font1">VIP年卡(12个月)</view>
+      <view class="font2" data-index="0"  bindtap="openPopup">会员权益与说明</view>
+    </view>
+
+    <view class="popup-box" wx:if="{{showIndex=='0'}}" bindtap="closePopup"></view> 
+    <view class="info-bottom" wx:if="{{showIndex=='0'}}">
+    <view class="row-info">
+    <view style="font-size: 30px;">
+      会员权益与服务说明
+    </view>
+    <view>
+      <view>一、VIP使用规则 </view>
+                <view>购买即同意《CSDN会员服务协议》</view>
+                <view>（1）VIP 购买成功后，在会员有效期内，VIP 可以免费享受以下权益：月卡 30 次、年卡 400次、超级年卡 400 次、两年卡 800 次下载立即发放到账，含 VIP 专享资源下载特权和积分资源下载特权，每日下载上限为 20 个资源。（2）新增福利：自 2021 年 4 月 1 日起，VIP新增 7 折下载付费资源的福利。 </view>
+                <view>【电子书】：1000+本电子书免费读，打开CSDNAPP-学习-电子书立即开始阅读（暂不支持其他端口阅读）。 </view>
+                <view> 【其他特权】：VIP身份标识及专享皮肤、博客自定义域名、博文原创保护、以及在博文内进行个人号推广等特权。 </view>
+                <view> 【特别说明】：（1）禁止用户使用任何方式利用本站资源为他人提供有偿下载服务，一经发现，本站有权进行冻结、取消或查封账号等处理。（2）账号异常下载包括同一IP多个账号多次下载等情形，一经发现将暂停相关用户下载权益，若账号被多次封禁，则CSDN有权冻结、取消或查封账号。 </view>
+                <view></view></view>
+  </view>
+  <view class="row-btn">
+    <view class="left-btn" bindtap="closePopup">取消</view>
+    <view class="right-btn" bindtap="closePopup" >确认</view>
+  </view>
+  </view>
+
+    <view class="line1"></view>
+    <view>
+      <image src="https://img01.yzcdn.cn/upload_files/2020/11/19/FgNMC2kwDIdqtIa-5f8o-JW468M4.jpg%21middle.jpg" style="width: 100%;"/>
+    </view>
+    <view class="bottom">
+    <checkbox-group bindchange="checkAll">
+      <view class="all">
+        <view class="selectAll">
+          商品总价
+        </view>
+        <view class="total">
+          ￥{{totalPrice}}元
+        </view>
+        <view class="opr" bindtap="buy">
+          立即开通
+        </view>
+      </view>
+    </checkbox-group>
+  </view>
+</view>

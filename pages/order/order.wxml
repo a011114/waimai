@@ -1,0 +1,44 @@
+<view class="order-page">
+  <view class="order-header">
+    <view class="order-title">我的订单</view>
+  </view>
+  
+  <view class="order-content">
+    <scroll-view class="order-scroll" scroll-y="true">
+    <block wx:if="{{noOrder}}">
+        <view class="order-item">
+          <view class="order-item-header">
+            <!-- <view wx:for="{{cartList}}" wx:key="{{item.id}}">{{cartList.name}}</view> -->
+            <view class="order-item-status">{{status}}</view>
+          </view>
+          <!-- 循环订单项列表中的每个订单项 -->
+          <block wx:for="{{cartList}}" >
+            <view class="order-item-detail">
+            <view>
+                <view class="order-item-detail-name">{{item.name}}</view>
+                <image class="dish-image" src="{{item.img}}"></image>
+            </view>
+              <view class="order-item-detail-amount">{{item.price}}¥<text decode="true">&nbsp;</text>×{{item.num}}</view>
+            </view>
+          </block>
+          <view class="order-item-total">
+            <view >总价：{{total}}</view>
+            <!-- <view bindtap="toShop">再来一单</view> -->
+        <block wx:if="{{canPay}}">
+          <button class="paybten"  bindtap="toPay">去支付</button>
+          </block>
+          <block wx:else="">
+            <view bindtap="toShop">再来一单</view>
+          </block>
+          </view>
+        </view>
+    </block>
+    <block wx:else="">
+    <view class="noimg" >
+    <image src="/images/noOrder.jpg" class="noOrderImg" ></image>
+    </view>
+    </block>
+    </scroll-view>
+  </view>
+</view>
+

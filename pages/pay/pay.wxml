@@ -1,0 +1,7 @@
+<!--pages/pay/pay.wxml-->
+<view >
+<view class="view-container">
+<text class="paytext"  >支付{{total}}元</text>
+</view>
+<view class="paybten" bindtap="toIndex">确认支付</view>
+</view>

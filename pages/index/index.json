@@ -1,0 +1,6 @@
+{
+    "navigationBarBackgroundColor": "#ffd161",
+  "usingComponents": {
+    "store-list": "/components/store-list/store-list"
+  }
+}

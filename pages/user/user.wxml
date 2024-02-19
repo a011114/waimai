@@ -1,0 +1,68 @@
+<view class='user_container'>
+  <view class="head">
+    <view>
+      <view class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb head_img" src="{{userInfo.avatarUrl}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{title}}</view>
+          <view class="weui-media-box__desc" style='color:#333'>{{phoneNum}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-panel">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_small-appmsg">
+        <view class="weui-cells weui-cells_in-small-appmsg">
+          <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <icon class='icon iconfont icon-hongbao-m' style='font-size:40rpx;margin-right:30rpx'></icon>
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view style='font-size:28rpx'>美团红包</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+          <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <icon class='icon iconfont icon-iconfontdizhi' style='font-size:40rpx;margin-right:30rpx'></icon>
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view style='font-size:28rpx'>我的地址</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+          <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <icon class='icon iconfont icon-liwuhuodong' style='font-size:40rpx;margin-right:30rpx'></icon>
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view style='font-size:28rpx'>邀请有奖</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+          <view class="weui-cell weui-cell_access" bindtap="getPhoneNum" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <icon class='icon iconfont icon-tubiao210' style='font-size:40rpx;margin-right:30rpx'></icon>
+            </view>
+            <view class="weui-cell__hd weui-cell_primary">
+              <view style='font-size:28rpx'>客服电话</view>
+            </view>
+            <view class="weui-cell__bd" style='color:#ffd161;margin-left:20rpx;font-size:26rpx'>
+              <view>***-***-**</view>
+            </view>
+            <view class="weui-cell__ft" style='font-size:24rpx'>9:00-23:00</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-panel">
+    <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class='weui-cell__bd' style='font-size:28rpx;text-align:center'>退出账号</view>
+    </view>
+  </view>
+</view>
